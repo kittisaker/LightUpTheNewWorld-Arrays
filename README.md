@@ -1,4 +1,4 @@
-# LightUpTheNewWorld : Chapter 1 Basic A
+# LightUpTheNewWorld : Chapter 1 Basic Array
 
 ## How to run
 
@@ -82,7 +82,7 @@ for element in myArray:
 1 2 10 4 5
 ```
 
-<details>
+</details>
 
 ## Array with class in C++, Java, TypeScript, Python
 ```CPP
