@@ -1,24 +1,19 @@
-# LightUpTheNewWorld : Chapter 2 Two Dimensional Array
+# LightUpTheNewWorld : Chapter 2 Copying Arrays in Java
 
-## Two Dimensional Array
+## Copying Arrays in Java
 ```cpp
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main(){
-    // Define a 2D array with 3 rows and 4 columns
-    int arr[3][4] = {
-        {1, 2, 3, 4},
-        {5, 6, 7, 8},
-        {9, 10, 11, 12}
-    };
+    int source[] = {1, 2, 3, 4, 5};
+    int destination[5];
 
-    // Access and print elements
-    for(const auto& row : arr){
-        for(int element : row){
-            cout << element << " ";
-        }
-        cout << endl;
+    copy(source, source + 5, destination);
+
+    for (int element : destination) {
+        cout << element << " ";
     }
 
     return 0;
@@ -28,64 +23,35 @@ int main(){
 ```java
 public class Main {
     public static void main(String[] args) {
-        // Define a 2D array with 3 rows and 4 columns
-        int[][] arr = {
-            {1, 2, 3, 4},
-            {5, 6, 7, 8},
-            {9, 10, 11, 12}
-        };
-
-        // Access and print elements
-        for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length; j++) {
-                System.out.print(arr[i][j] + " ");
-            }
-            System.out.println();
+        int[] source = {1, 2, 3, 4, 5};
+        int[] destination = new int[source.length];
+    
+        System.arraycopy(source, 0, destination, 0, source.length);
+    
+        for (int element : destination) {
+            System.out.print(element + " ");
         }
     }
 }
 ```
 
 ```typescript
-// Define a 2D array with 3 rows and 4 columns
-const arr: number[][] = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12]
-];
+const source: number[] = [1, 2, 3, 4, 5];
 
-// Access and print elements
-for(const row of arr){
-    for(const element of row){
-        console.log(element);
-    }
+const destiantion: number[] = [...source];
+
+for (const element of destiantion) {
+    console.log(element);
 }
 ```
 
 ```python
-# Define a 2D list (array) with 3 rows and 4 columns
-arr = [
-    [1, 2, 3, 4],
-    [5, 6, 7, 8],
-    [9, 10, 11, 12]
-]
+source = [1, 2, 3, 4, 5]
 
-# Access and print elements
-for row in arr:
-    for element in row:
-        print(element, end=' ')
-    print()
+destiantion = source[:]
+
+for element in destiantion :
+    print(element, end=" ")
 ```
-
-<details>
-<summary>Output : </summary>
-
-```shell
-1 2 3 4 
-5 6 7 8 
-9 10 11 12
-```
-
-</details>
 
 ---
