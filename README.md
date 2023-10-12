@@ -88,24 +88,4 @@ for row in arr:
 
 </details>
 
-## Two Dimensional Array of Objects
-
-
-
-
-
-
-
-
-
-
-
-
-<details>
-<summary>Output : </summary>
-
-```shell
-
-```
-
-</details>
+---
