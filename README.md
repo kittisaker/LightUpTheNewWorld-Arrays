@@ -1,19 +1,20 @@
-# LightUpTheNewWorld : Chapter 2 Copying Arrays in Java
+# LightUpTheNewWorld : Chapter 4 Convert Array to ArrayList
 
-## Copying Arrays in Java
+## Convert Array to ArrayList
+
 ```cpp
 #include <iostream>
-#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main(){
-    int source[] = {1, 2, 3, 4, 5};
-    int destination[5];
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
 
-    copy(source, source + 5, destination);
+    vector<int> arrayList(arr, arr + size);
 
-    for (int element : destination) {
-        cout << element << " ";
+    for(int value : arrayList){
+        cout << value << " ";
     }
 
     return 0;
@@ -21,37 +22,38 @@ int main(){
 ```
 
 ```java
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
-        int[] source = {1, 2, 3, 4, 5};
-        int[] destination = new int[source.length];
+        Integer[] arr = {1, 2, 3, 4, 5};
+
+        List<Integer> arrayList = new ArrayList<>(Arrays.asList(arr));
     
-        System.arraycopy(source, 0, destination, 0, source.length);
-    
-        for (int element : destination) {
-            System.out.print(element + " ");
+        for(int value : arrayList){
+            System.out.print(value + " ");
         }
     }
 }
 ```
 
 ```typescript
-const source: number[] = [1, 2, 3, 4, 5];
+const arr: number[] = [1, 2, 3, 4, 5];
+const arrayList: number[] = [...arr];
 
-const destiantion: number[] = [...source];
-
-for (const element of destiantion) {
-    console.log(element);
+for (const value of arrayList) {
+    console.log(value + " ");
 }
 ```
 
 ```python
-source = [1, 2, 3, 4, 5]
+arr = [1, 2, 3, 4, 5]
+array_list = list(arr)
 
-destiantion = source[:]
-
-for element in destiantion :
-    print(element, end=" ")
+for value in array_list:
+    print(value, end=" ")
 ```
 
 ---

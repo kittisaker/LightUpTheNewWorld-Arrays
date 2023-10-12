@@ -1,15 +1,15 @@
 #include <iostream>
-#include <algorithm>
+#include <vector>
 using namespace std;
 
 int main(){
-    int source[] = {1, 2, 3, 4, 5};
-    int destination[5];
+    int arr[] = {1, 2, 3, 4, 5};
+    int size = sizeof(arr) / sizeof(arr[0]);
 
-    copy(source, source + 5, destination);
+    vector<int> arrayList(arr, arr + size);
 
-    for (int element : destination) {
-        cout << element << " ";
+    for(int value : arrayList){
+        cout << value << " ";
     }
 
     return 0;

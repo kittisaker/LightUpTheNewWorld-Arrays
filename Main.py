@@ -1,6 +1,5 @@
-source = [1, 2, 3, 4, 5]
+arr = [1, 2, 3, 4, 5]
+array_list = list(arr)
 
-destiantion = source[:]
-
-for element in destiantion :
-    print(element, end=" ")
+for value in array_list:
+    print(value, end=" ")

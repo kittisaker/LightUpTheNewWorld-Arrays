@@ -1,7 +1,6 @@
-const source: number[] = [1, 2, 3, 4, 5];
+const arr: number[] = [1, 2, 3, 4, 5];
+const arrayList: number[] = [...arr];
 
-const destiantion: number[] = [...source];
-
-for (const element of destiantion) {
-    console.log(element);
+for (const value of arrayList) {
+    console.log(value + " ");
 }
