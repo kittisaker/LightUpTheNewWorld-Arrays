@@ -6,8 +6,8 @@ int main(){
 
     myArray[2] = 10;
 
-    for (int i = 0; i < 5; i++){
-        cout << myArray[i] << " ";
+    for (int element : myArray) {
+        cout << element << " ";
     }
 
     return 0;

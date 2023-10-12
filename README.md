@@ -34,8 +34,8 @@ int main(){
 
     myArray[2] = 10;
 
-    for (int i = 0; i < 5; i++){
-        cout << myArray[i] << " ";
+    for (int element : myArray) {
+        cout << element << " ";
     }
 
     return 0;
@@ -49,8 +49,8 @@ public class Main {
 
         myArray[2] = 10;
 
-        for (int i = 0; i < myArray.length; i++){
-            System.out.print(myArray[i] + " ");
+        for (int element : myArray){
+            System.out.print(element + " ");
         }
     }
 }
@@ -61,8 +61,8 @@ let myArray: number[] = [1, 2, 3, 4, 5];
 
 myArray[2] = 10;
 
-for (let i = 0; i < myArray.length; i++){
-    console.log(myArray[i]);
+for (let lelment of myArray){
+    console.log(lelment);
 }
 ```
 
