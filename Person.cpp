@@ -1,29 +1,26 @@
 #include <iostream>
-#include <string>
+#include <vector>
+using namespace std;
 
 class Person{
-
 public:
     std::string name;
     int age;
+    
+    Person(std::string name, int age) : name(name), age(age) {}
 };
 
 int main(){
-    Person people[3];
+    vector<Person> people;
 
-    people[0].name = "Alice";
-    people[0].age = 25;
-
-    people[1].name = "Bob";
-    people[1].age = 30;
-
-    people[2].name = "Charlie";
-    people[2].age = 35;
+    people.push_back(Person("Alice", 25));
+    people.push_back(Person("Bob", 30));
+    people.push_back(Person("Charlie", 35));
 
     people[1].age = 31;
 
     for (const Person& person : people) {
-        std::cout << "Name: " << person.name << ", Age: " << person.age << std::endl;
+        cout << "Name: " << person.name << ", Age: " << person.age << endl;
     }
     
     return 0;

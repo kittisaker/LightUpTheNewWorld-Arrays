@@ -88,6 +88,7 @@ for element in myArray:
 ```CPP
 #include <iostream>
 #include <string>
+using namespace std;
 
 class Person{
 
@@ -111,7 +112,7 @@ int main(){
     people[1].age = 31;
 
     for (const Person& person : people) {
-        std::cout << "Name: " << person.name << ", Age: " << person.age << std::endl;
+        cout << "Name: " << person.name << ", Age: " << person.age << endl;
     }
     
     return 0;
@@ -210,6 +211,7 @@ The following C and Java languages do not use basic Arrays, but use additional t
 ```C++
 #include <iostream>
 #include <vector>
+using namespace std;
 
 class Person{
 public:
@@ -220,7 +222,7 @@ public:
 };
 
 int main(){
-    std::vector<Person> people;
+    vector<Person> people;
 
     people.push_back(Person("Alice", 25));
     people.push_back(Person("Bob", 30));
@@ -229,7 +231,7 @@ int main(){
     people[1].age = 31;
 
     for (const Person& person : people) {
-        std::cout << "Name: " << person.name << ", Age: " << person.age << std::endl;
+        cout << "Name: " << person.name << ", Age: " << person.age << endl;
     }
     
     return 0;
