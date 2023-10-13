@@ -41,6 +41,7 @@ public class Main {
 ```
 
 ```typescript
+// (not needed in TypeScript)
 const arr: number[] = [1, 2, 3, 4, 5];
 const arrayList: number[] = [...arr];
 
@@ -50,6 +51,7 @@ for (const value of arrayList) {
 ```
 
 ```python
+# (not needed in Python)
 arr = [1, 2, 3, 4, 5]
 array_list = list(arr)
 
