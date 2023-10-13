@@ -4,12 +4,13 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] arr = {1, 2, 3, 4, 5};
+        List<Integer> arrayList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
 
-        // List<Integer> arrayList = new ArrayList<>(Arrays.asList(arr));
-        List<Integer> arrayList = Arrays.asList(arr);
-    
-        for(int value : arrayList){
+        // Convert 'arrayList' to an array
+        Integer[] arr = arrayList.toArray(new Integer[0]);
+
+        // Print the array
+        for (Integer value : arr) {
             System.out.print(value + " ");
         }
     }

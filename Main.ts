@@ -1,6 +1,9 @@
-const arr: number[] = [1, 2, 3, 4, 5];
-const arrayList: number[] = [...arr];
+const arrayList: number[] = [1, 2, 3, 4, 5];
 
-for (const value of arrayList) {
-    console.log(value + " ");
+// Convert 'arrayList' to an array (not needed in TypeScript)
+const arr: number[] = [...arrayList];
+
+// Print the array
+for (const value of arr) {
+    console.log(value + ' ');
 }

@@ -1,5 +1,8 @@
-arr = [1, 2, 3, 4, 5]
-array_list = list(arr)
+arrayList = [1, 2, 3, 4, 5]
 
-for value in array_list:
-    print(value, end=" ")
+# Convert 'array_list' to an array (not needed in Python)
+arr = arrayList[:]
+
+# Print the array
+for value in arr:
+    print(value, end=' ')

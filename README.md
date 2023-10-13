@@ -1,21 +1,28 @@
-# LightUpTheNewWorld : Chapter 4 Convert Array to ArrayList
+# LightUpTheNewWorld : Chapter 5 Convert ArrayList to Array
 
-## Convert Array to ArrayList
-
+## Convert ArrayList to Array
 ```cpp
 #include <iostream>
 #include <vector>
 using namespace std;
 
 int main(){
-    int arr[] = {1, 2, 3, 4, 5};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    vector<int> arrayList = {1, 2, 3, 4, 5};
 
-    vector<int> arrayList(arr, arr + size);
-
-    for(int value : arrayList){
-        cout << value << " ";
+    // Convert 'arrayList' to an array
+    int* arr = new int[arrayList.size()];
+    for (size_t i = 0; i < arrayList.size(); i++){
+        arr[i] = arrayList[i];
     }
+
+    // Print the array
+    for (size_t i = 0; i < arrayList.size(); i++){
+        cout << arr[i] << " ";
+    }
+
+    // Don't forget to free the allocated memory
+    delete[] arr;    
+    
 
     return 0;
 }
@@ -28,33 +35,40 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Integer[] arr = {1, 2, 3, 4, 5};
+        List<Integer> arrayList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
 
-        // List<Integer> arrayList = new ArrayList<>(Arrays.asList(arr));
-        List<Integer> arrayList = Arrays.asList(arr);
-    
-        for(int value : arrayList){
+        // Convert 'arrayList' to an array
+        Integer[] arr = arrayList.toArray(new Integer[0]);
+
+        // Print the array
+        for (Integer value : arr) {
             System.out.print(value + " ");
         }
     }
 }
 ```
 
-```typescript
-const arr: number[] = [1, 2, 3, 4, 5];
-const arrayList: number[] = [...arr];
+```taypscript
+const arrayList: number[] = [1, 2, 3, 4, 5];
 
-for (const value of arrayList) {
-    console.log(value + " ");
+// Convert 'arrayList' to an array (not needed in TypeScript)
+const arr: number[] = [...arrayList];
+
+// Print the array
+for (const value of arr) {
+    console.log(value + ' ');
 }
 ```
 
 ```python
-arr = [1, 2, 3, 4, 5]
-array_list = list(arr)
+arrayList = [1, 2, 3, 4, 5]
 
-for value in array_list:
-    print(value, end=" ")
+# Convert 'array_list' to an array (not needed in Python)
+arr = arrayList[:]
+
+# Print the array
+for value in arr:
+    print(value, end=' ')
 ```
 
 ---

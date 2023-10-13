@@ -3,14 +3,21 @@
 using namespace std;
 
 int main(){
-    int arr[] = {1, 2, 3, 4, 5};
-    int size = sizeof(arr) / sizeof(arr[0]);
+    vector<int> arrayList = {1, 2, 3, 4, 5};
 
-    vector<int> arrayList(arr, arr + size);
-
-    for(int value : arrayList){
-        cout << value << " ";
+    // Convert 'arrayList' to an array
+    int* arr = new int[arrayList.size()];
+    for (size_t i = 0; i < arrayList.size(); i++){
+        arr[i] = arrayList[i];
     }
+
+    // Print the array
+    for (size_t i = 0; i < arrayList.size(); i++){
+        cout << arr[i] << " ";
+    }
+
+    // Don't forget to free the allocated memory
+    delete[] arr;    
 
     return 0;
 }
