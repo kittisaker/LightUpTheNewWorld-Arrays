@@ -128,7 +128,7 @@ public class Main {
     
     public static void main(String[] args) {
         // Declare an array of custom class objects
-        Person[] people = new Person[3];
+        Person people[] = new Person[3];
 
         // Initialize the objects
         people[0] = new Person();
